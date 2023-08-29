@@ -29,11 +29,11 @@ class spacecraft {
             } else if (this.getDirection() === 'W') {
               this.position[0]--;
             }
-          } else if (command === 'r') { //for
+          } else if (command === 'r') { //for right
             this.currentDirectionIndex = (this.currentDirectionIndex + 1) % 4;
-          } else if (command === 'u') {
+          } else if (command === 'u') { //for up
             this.position[2]++;
-          } else if (command === 'b') {
+          } else if (command === 'b') { // for back
             if (this.getDirection() === 'N') {
               this.position[1]--;
             } else if (this.getDirection() === 'E') {
@@ -43,7 +43,7 @@ class spacecraft {
             } else if (this.getDirection() === 'W') {
               this.position[0]++;
             }
-          } else if (command === 'l') {
+          } else if (command === 'l') { // for left
             this.currentDirectionIndex = (this.currentDirectionIndex + 3) % 4;
           }
         }
